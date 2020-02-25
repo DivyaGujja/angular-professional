@@ -1,0 +1,107 @@
+<div class="container">
+    <div class="row mx-auto">
+        <div class="col-md-12">
+            <h4 style="padding-left: 350px">Registration Form</h4>
+        </div>
+    </div>
+    <div class="row mx-auto">
+        <div class="col-md-12">
+            <form #regForm="ngForm" (ngSubmit)="onRegister(regForm)">
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                            <label for="FirstName">First Name:</label>
+                            <input type="text"
+                                   id="FirstName"
+                                   name="FirstName"
+                                   class="form-control"
+                                   ngModel
+                                   required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                            <label for="LastName">Last Name:</label>
+                            <input type="text"
+                                    id="LastName"
+                                    name="LastName"
+                                    class="form-control"
+                                    ngModel
+                                    required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                            <label for="Email">Email:</label>
+                            <input type="email"
+                                    id="Email"
+                                    name="Email"
+                                    class="form-control"
+                                    ngModel
+                                    required
+                                    email>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                            <label for="streetAddress">Street Address</label>
+                            <input type="text"
+                                    id="streetAddress"
+                                    name="streetAddress"
+                                    class="form-control"
+                                    ngModel
+                                    required>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-5 form-group">
+                            <label for="city">City</label>
+                            <input type="text"
+                                    id="city"
+                                    name="city"
+                                    class="form-control"
+                                    ngModel
+                                    required>
+                    </div>
+                    <div class="col-md-2 form-group">
+                            <label for="state">State</label>
+                            <input type="text"
+                                    id="state"
+                                    name="state"
+                                    class="form-control"
+                                    ngModel
+                                    required>
+                    </div>
+                    <div class="col-md-5 form-group">
+                            <label for="zipCode">Zip Code</label>
+                            <input type="number" 
+                                    id="zipCode"
+                                    name="zipCode"
+                                    class="form-control" max="9999" min="0" 
+                                    pattern="\d*"
+                                    onKeyDown="if(this.value.length==5)return false"
+                                    ngModel
+                                    required
+                                    >
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                            <label for="hobbies">Hobbies(Optional)</label>
+                            <br>
+                            <textarea name="hobbies" id="hobbies" cols="50" rows="5" NgModel></textarea>
+                    </div>
+                </div> 
+                <button class="btn btn-primary" type="submit"
+                        [disabled]="!regForm.valid">Submit</button> 
+            </form>
+            <hr>
+            <div class="row" *ngIf="Registered">
+                <div class="col-md-12">
+                    <p>FirstName: {{User.firstName}}</p>
+                    <p>LastName: {{User.lastName}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
