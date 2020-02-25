@@ -1,0 +1,34 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-main-nav></app-main-nav>
+<nav class="navbar navbar-expan-sm- bg-dark fixed-top navbar-dark">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand nav-link" href="#">WedApp</a>
+    </div>
+  </div>
+</nav>
+<br>
+<br>
+<br>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-2">
+          <nav class="navbar bg-info navbar-light">
+              <div class="container-fluid">
+                <ul class="nav navbar-nav flex-column nav-tabs">
+                  <li class="nav-item"><a class="nav-link" routerLink="/about">About</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="/services">Services</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="/custsupt">Customer Support</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="/contact">Contact</a></li>
+                </ul>  
+              </div>
+            </nav>
+      </div>
+      <div class="col-md-10">
+        <router-outlet></router-outlet>
+      </div>
+  </div>
+</div>
+
+
+

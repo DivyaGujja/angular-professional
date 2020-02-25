@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 offset-md-2">
+            <h2>Search Result Page</h2>
+            <div *ngIf="serverData?.length > 0">
+                <ul *ngFor="let data of serverData">
+                    <li> {{data.standardName}} </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

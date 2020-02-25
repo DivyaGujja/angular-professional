@@ -1,0 +1,7 @@
+1. MySql application should be running.
+2. Go to bin folder in mysql using the below command in the terminal
+   cd /usr/local/mysql/bin/; ls
+3. Now use the below command to connect to mysql database
+   ./mysql -u root -p password 
+
+*note* password to connect to mysql root is password.
